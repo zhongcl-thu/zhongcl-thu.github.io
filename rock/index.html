@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sim2Real Object-Centric Keypoint Detection and Description</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./offcanvas.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div align="center">
+            <div class="container"></div>
+            <div align="center">
+                <h2>Sim2Real Object-Centric Keypoint Detection and Description</h2>
+                <h3>AAAI 2022</h3>
+            </div>
+
+            <hr>
+            <p class="authors">
+                <a href="https://zhongcl-thu.github.io/">Chengliang Zhong<sup>*12</sup></a>,
+                <a href="https://scholar.google.com/citations?user=5KRbHPMAAAAJ&hl=en&oi=ao">Chao Yang<sup>*2</sup></a>,
+                <a>Jinshan Qi<sup>4</sup></a>,
+                <a>Fuchun Sun<sup>2</sup></a>,
+                <a href="https://sites.google.com/site/thuliuhuaping/home?authuser=0">Huaping Liu<sup>2</sup></a>
+                <a>Xiaodong Mu<sup>1</sup></a>
+                <a href="https://wenbinghuangshomepage/home">Wenbing Huang<sup>3</sup></a>
+            </p>
+            <p class="institution">
+                <sup>1</sup> Xi’an Research Institute of High-Tech, Xi’an 710025, China&nbsp;&nbsp;&nbsp;
+                <br>
+                <sup>2</sup> Department of Computer Science and Technology, Tsinghua University, Beijing 100084, China
+                <br>
+                <sup>3</sup> Institute for AI Industry Research, Tsinghua University, Beijing 100084, China
+                <br>
+                <sup>4</sup> Shandong University of Science and Technology, Qingdao 266590, China
+            </p>
+
+            <div class="btn-group" role="group" aria-label="Top menu">
+                <a class="btn btn-primary" href="http://arxiv.org/abs/2202.00448">Paper</a>
+                <a class="btn btn-primary"
+                    href="https://github.com/zhongcl-thu/zhongcl-thu.github.io/blob/main/projects/AAAI22/aaai_poster.pdf">Poster</a>
+            </div>
+        </div>
+
+        <hr>
+        <div class="container">
+            <div class="section">
+                <div align="center">
+                    <h2>Abstract</h2>
+                </div>
+                <p style="text-align:justify; text-justify:inter-ideograph;">
+                    Keypoint detection and description play a central role in
+                    computer vision. Most existing methods are in the form of
+                    scene-level prediction, without returning the object classes
+                    of different keypoints. In this paper, we propose the object-
+                    centric formulation, which, beyond the conventional setting,
+                    requires further identifying which object each interest point
+                    belongs to. With such fine-grained information, our frame-
+                    work enables more downstream potentials, such as object-
+                    level matching and pose estimation in a clustered environ-
+                    ment. To get around the difficulty of label collection in the
+                    real world, we develop a sim2real contrastive learning mech-
+                    anism that can generalize the model trained in simulation to
+                    real-world applications. The novelties of our training method
+                    are three-fold: (i) we integrate the uncertainty into the learn-
+                    ing framework to improve feature description of hard cases,
+                    e.g., less-textured or symmetric patches; (ii) we decouple
+                    the object descriptor into two output branches—intra-object
+                    salience and inter-object distinctness, resulting in a better
+                    pixel-wise description; (iii) we enforce cross-view semantic
+                    consistency for enhanced robustness in representation learn-
+                    ing. Comprehensive experiments on image matching and 6D
+                    pose estimation verify the encouraging generalization ability
+                    of our method from simulation to reality. Particularly for 6D
+                    pose estimation, our method significantly outperforms typical
+                    unsupervised/sim2real methods, achieving a closer gap with
+                    the fully supervised counterpart.
+                </p>
+
+                <div class="section">
+                    <div align="center">
+                        <h2>Results</h2>
+                    </div>
+                    <div class="row justify-content-left">
+                        <div class="col-sm-6">
+                            <video src="./video/cracker_box.mp4" controls="controls" width="540" height="480">
+                            </video>
+                        </div>
+                        <div class="col-sm-6">
+                            <video src="./video/sugar_box.mp4" controls="controls" width="540" height="480">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-left">
+                        <div class="col-sm-6">
+                            <video src="./video/bleach.mp4.mp4" controls="controls" width="540" height="480">
+                            </video>
+                        </div>
+                        <div class="col-sm-6">
+                            <video src="./video/mustard_bottle.mp4" controls="controls" width="540" height="480">
+                            </video>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section">
+                    <div align="center">
+                        <h2>Paper</h2>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="list-group">
+                            <a href="https://arxiv.org/abs/2202.00448" class="list-group-item">
+                                <img src="fig/paper_thumbnail.png"
+                                    style="width:100%; margin-right:-20px; margin-top:-10px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div align="center">
+                        <h2>Bibtex</h2>
+                    </div>
+                    <hr>
+                    <div class="bibtexsection">
+                        @misc{zhong2022sim2real,
+                        title={Sim2Real Object-Centric Keypoint Detection and Description},
+                        author={Chengliang Zhong and Chao Yang and Jinshan Qi and Fuchun Sun and Huaping Liu and
+                        Xiaodong Mu and Wenbing Huang},
+                        year={2022},
+                        eprint={2202.00448},
+                        archivePrefix={arXiv},
+                        primaryClass={cs.CV}
+                        }
+                    </div>
+                </div>
+
+                <hr>
+
+                <footer>
+                    <p>Send feedback and questions to <a href="https://zhongcl-thu.github.io/">Chengliang Zhong</a></p>
+                </footer>
+            </div>
+
+</body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</html>
